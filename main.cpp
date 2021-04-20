@@ -5,7 +5,7 @@ int askChoice();
 
 int main() {
 
-  int input1, input2, output;
+  int input1, input2;
 
   if (askChoice() == 1) {
     cout << "You would like to add." << endl;
@@ -21,7 +21,43 @@ int main() {
     cout << input1 + input2;
   } else
   if (askChoice() == 2) {
+    cout << "You would like to subtract." << endl;
+    cout << "Please enter first number: " << endl << endl;
+    cout << "First Number: ";
+    cin >> input1;
 
+    cout << "Please enter the number you would like to subtract: " << endl << endl;
+    cout << "Second Number: ";
+    cin >> input2;
+
+    cout << input1 << " - " << input2 << " = ";
+    cout << input1 - input2;
+  } else
+  if (askChoice() == 3) {
+    cout << "You would like to divide." << endl;
+    cout << "Please enter first number: " << endl << endl;
+    cout << "First Number: ";
+    cin >> input1;
+
+    cout << "Please enter the number you would like to divide by: " << endl << endl;
+    cout << "Second Number: ";
+    cin >> input2;
+
+    cout << input1 << " / " << input2 << " = ";
+    cout << input1 / input2;
+  } else
+  if (askChoice() == 4) {
+    cout << "You would like to multiply." << endl;
+    cout << "Please enter first number: " << endl << endl;
+    cout << "First Number: ";
+    cin >> input1;
+
+    cout << "Please enter the number you would like to multiply by: " << endl << endl;
+    cout << "Second Number: ";
+    cin >> input2;
+
+    cout << input1 << " * " << input2 << " = ";
+    cout << input1 * input2;
   }
 
   return 0;
