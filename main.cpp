@@ -1,12 +1,14 @@
 #include <iostream>
 using namespace std;
 
+//Prototyping the function.
 int askChoice();
 
 int main() {
 
   double input1, input2;
 
+//Switch to group choices and output answers.
   switch (askChoice()) {
     case 1:
       cout << "You would like to add." << endl;
@@ -65,6 +67,7 @@ int main() {
   return 0;
 }
 
+//Function to check what operator the user wants.
 int askChoice() {
 
   int choice;
