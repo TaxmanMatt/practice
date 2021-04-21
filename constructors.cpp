@@ -6,8 +6,8 @@ using namespace std;
 class MatthewClass {
     public:
         //Contrsuctor uses the same name as the class.
-        MatthewClass() {
-            cout << "constructors get called automatically when creating a class object.";
+        MatthewClass(string z) {
+            setName(z);
         }
         void setName(string x) {
             name = x;
@@ -21,7 +21,12 @@ class MatthewClass {
 
 int main()
 {
-    MatthewClass bo;
+    MatthewClass bo("Lucky Bucky");
+    cout << bo.getName() << endl;
+
+    //Each object gets assigned it's own set of variables in the class.
+    MatthewClass bo2("Chuckle Fuckles");
+    cout << bo2.getName();
 
     return 0;
 }
