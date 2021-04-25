@@ -9,6 +9,7 @@
 class myClass {
     public:
         myClass();
+        ~myClass();
 };
 
 
