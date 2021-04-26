@@ -14,5 +14,6 @@ using namespace std;
 void Daughter::doSomething() {
     publicv = 1;
     protectedv = 2;
-    privatev = 3;
+    //You won't be able to inherit the private variables.
+    //privatev = 3;
 }
