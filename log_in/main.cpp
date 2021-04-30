@@ -1,8 +1,10 @@
 #include <iostream>
+#include <fstream>
 using namespace std;
 
 int splashScreen();
 void loginFunction();
+void registration();
 
 int main()
 {
@@ -26,13 +28,14 @@ int splashScreen() {
             loginFunction();
             break;
         case 2:
-            //registerCheckFunction();
+            registration();
             break;
         default:
             //TODO fix bug where if input isn't of type int causes infinite loop.
+            //try/catch still not working.
             try {
-                if (choice != 1 || choice != 2 || !cin) {
-                    throw 505;
+                if (choice != 1-2) {
+                    throw 404;
                 }
             }
             catch(int errorNum) {
@@ -51,6 +54,31 @@ void loginFunction() {
     cout << "password: ";
     cin >> password;
 
-    //checkDetailsFunction();
+    //checkDetailsCorrectFunction();
+}
 
+/*
+checkDetailsCorrectFunction() {
+    if details are correct open loginScreen();
+}
+*/
+
+void registration() {
+    cout.flush(); //Maybe turn this into a constructor when moving to class.
+                  //TODO This needs fixing. It doesn't work. Needs to clear screen.
+    string name, surname, email;
+    ofstream userFile("users.txt");
+
+    cout << "\n\nPlease enter your first name: ";
+    cin >> name;
+    cout << "Please enter your surname: ";
+    cin >> surname;
+    cout << "Please enter your email address: ";
+    cin >> email;
+    userFile << name << ' ' << surname << ' ' << email;
+
+    cout << "\nThank you, please check your mail and confirm registration.\n\n";
+    //TODO implement a working email system????
+    userFile.close();
+    splashScreen();
 }
