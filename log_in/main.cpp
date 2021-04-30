@@ -63,6 +63,7 @@ checkDetailsCorrectFunction() {
 }
 */
 
+//TODO I think existing data gets overwritten instead of added to.
 void registration() {
     cout.flush(); //Maybe turn this into a constructor when moving to class.
                   //TODO This needs fixing. It doesn't work. Needs to clear screen.
