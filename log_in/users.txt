@@ -1,1 +1,4 @@
 jimmy cricket cricketplayer@lords.com
+james,small,jimmysmall@rugby.co.za
+Albon,Alex,Alex@jobless.com
+Cat,dog,catdog@gmail.com
