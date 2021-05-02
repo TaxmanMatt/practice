@@ -66,12 +66,12 @@ checkDetailsCorrectFunction() {
 }
 */
 
-//TODO I think existing data gets overwritten instead of added to.
 void registration() {
     cout.flush(); //Maybe turn this into a constructor when moving to class.
                   //TODO This needs fixing. It doesn't work. Needs to clear screen.
-    string name, surname, email;
+    string name, surname, email, user, pass;
     ofstream userFile("users.txt", std::ios_base::app);
+    ofstream loginFile("login.txt", std::ios_base::app);
 
     cout << "\n\nPlease enter your first name: ";
     cin >> name;
@@ -79,11 +79,17 @@ void registration() {
     cin >> surname;
     cout << "Please enter your email address: ";
     cin >> email;
-    userFile << surname << "," << name << ',' << email << endl;
+    cout  << "Please enter your username: ";
+    cin >> user;
+    cout << "Please enter your password: ";
+    cin >> pass;
+    userFile << surname << "," << name << "," << email << endl;
+    loginFile << user << "," << pass << endl;
 
     cout << "\nThank you, please check your mail and confirm registration.\n\n";
     //TODO implement a working email system????
     userFile.close();
+    loginFile.close();
     splashScreen();
 }
 
