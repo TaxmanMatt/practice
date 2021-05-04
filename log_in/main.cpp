@@ -63,12 +63,13 @@ void loginFunction() {
 /*
 checkDetailsCorrectFunction() {
     if details are correct open loginScreen();
+    //Lock system if three incorrect inputs?
 }
 */
 
 void registration() {
-    cout.flush(); //Maybe turn this into a constructor when moving to class.
-                  //TODO This needs fixing. It doesn't work. Needs to clear screen.
+    cout << flush; //Maybe turn this into a constructor when moving to class.
+                   //TODO This needs fixing. It doesn't work. Needs to clear screen.
     string name, surname, email, user, pass;
     ofstream userFile("users.txt", std::ios_base::app);
     ofstream loginFile("login.txt", std::ios_base::app);
@@ -85,6 +86,8 @@ void registration() {
     cin >> pass;
     userFile << surname << "," << name << "," << email << endl;
     loginFile << user << "," << pass << endl;
+
+    //Have to check if the user name is already in the system.
 
     cout << "\nThank you, please check your mail and confirm registration.\n\n";
     //TODO implement a working email system????
